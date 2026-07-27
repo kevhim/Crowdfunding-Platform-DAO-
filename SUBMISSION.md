@@ -22,6 +22,7 @@ AetherFund is an end-to-end Web3 decentralized application built to solve the tr
 | **`src/index.css` & `src/App.jsx`** | 100% Light design system (#F8FAFC slate background, crisp white cards, vibrant Teal & Ocean Blue accents). |
 | **`DESIGN.md`** | Complete Design Guidelines, color tokens, typography system, and design prompts. |
 | **`README.md`** | Setup instructions, architecture diagram (Mermaid), smart contract API, and testing guide. |
+| **`SECURITY.md`** | Comprehensive SWC security audit matrix & web cybersecurity vulnerability assessment. |
 | **`test/CrowdfundDAO.test.js`** | Automated unit tests (Vitest) verifying smart contract logic and refund guarantees. |
 | **`scripts/deploy.js` & `hardhat.config.cjs`** | EVM testnet deployment configuration & script. |
 
