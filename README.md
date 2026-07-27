@@ -1,86 +1,97 @@
-# 🚀 AetherFund: Decentralized Crowdfunding & Milestone Governance
+# 🌐 AetherFund - Decentralized Crowdfunding & Milestone Governance Protocol
 
-**Intern ID**: `CITS7292`
+![License](https://img.shields.io/badge/License-MIT-teal.svg)
+![Solidity](https://img.shields.io/badge/Solidity-0.8.20-blue.svg)
+![React 19](https://img.shields.io/badge/React-19-cyan.svg)
+![Vitest](https://img.shields.io/badge/Tests-12%20Passed-success)
+![Vulnerability Audit](https://img.shields.io/badge/Audit-0%20Vulnerabilities-emerald)
 
-AetherFund is a high-security, transparent crowdfunding platform built on the Ethereum Virtual Machine (EVM). It introduces **DAO Milestone Governance**, ensuring creators do not receive all raised funds in a single lump sum. Instead, funds are locked in the smart contract and released incrementally only when campaign backers approve milestone payout proposals through weighted voting proportional to their ETH contributions.
-
----
-
-## 🌟 Key Technical Features
-
-1. **Reentrancy Security Guard**: Smart contracts utilize custom `nonReentrant` state locks guarding all ETH transfers against recursive fallback attacks.
-2. **Checks-Effects-Interactions Pattern**: Applied to `claimRefund()` to guarantee internal contributor balances are cleared before executing external Ether transfers.
-3. **DAO Weighted Voting Governance**: Backer voting power equals their exact ETH contribution amount. Payouts require majority vote consensus (`votesFor > votesAgainst`).
-4. **Dual-Mode Web3 Architecture**:
-   - **Virtual Testnet Sandbox**: Zero-dependency local environment with pre-funded test accounts, simulated block mining, and real-time state persistence.
-   - **MetaMask EVM Bridge**: Seamless 1-click fallback to browser wallet providers (`ethers.js` v6).
-5. **Teal & Ocean Blue Light Design System**: Vibrant Teal (`#0D9488`) and Ocean Cyan (`#0284C7`) accents, crisp Slate typography, flat card containers with subtle borders (`#E2E8F0`), and generous breathing room.
+**AetherFund** is an open-source, high-security Web3 crowdfunding platform built on the Ethereum Virtual Machine (EVM). It replaces traditional lump-sum fundraising with **DAO Milestone Governance**, ensuring project creators receive capital incrementally as backers approve milestone progress through weighted on-chain voting.
 
 ---
 
-## 🏗️ Architecture & Component Flow
+## 🌟 Key Features & Technical Architecture
+
+- **DAO Milestone Governance**: Funds raised are locked in the smart contract vault and released in tranches only after backer consensus (`votesFor > votesAgainst`).
+- **Reentrancy Protection**: Smart contracts implement custom `nonReentrant` state locks guarding all Ether transfer functions against reentrancy attacks.
+- **Guaranteed Refunds (Checks-Effects-Interactions)**: Automatic 100% ETH refund mechanism for backers if a campaign expires without reaching its funding goal.
+- **Dual-Mode Web3 Execution**:
+  - **Standalone Sandbox Mode**: 100% client-side local simulator with pre-funded accounts, simulated block mining, and persistent state. Works offline out of the box.
+  - **EVM Wallet Bridge**: Connects seamlessly to browser wallet providers (MetaMask, Coinbase Wallet) via `Ethers.js v6`.
+- **Solid Light UI System**: Vibrant Teal (`#0D9488`) and Ocean Blue (`#0284C7`) solid color palette designed for high contrast and readability.
+
+---
+
+## 🏗️ System Architecture
 
 ```mermaid
 graph TD
-    User([Backer / Creator Wallet]) -->|MetaMask / Virtual Sandbox| Web3Service[Web3 Provider Service]
-    Web3Service -->|EVM Method Call| SmartContract[CrowdfundDAO.sol]
+    User([Backer / Creator Wallet]) -->|MetaMask / Sandbox| Web3Service[Web3 Provider Service]
+    Web3Service -->|EVM Call| SmartContract[CrowdfundDAO.sol]
     
     subgraph SmartContract [EVM Smart Contract Layer]
-        ReentrancyGuard[Reentrancy Guard]
-        StateMap[Campaign & Contribution Mapping]
+        ReentrancyGuard[Reentrancy Guard Lock]
+        StateMap[Campaign & Contribution Mappings]
         GovernanceEngine[DAO Milestone Voting Engine]
         RefundEngine[Checks-Effects-Interactions Refund]
     end
     
-    SmartContract -->|On-Chain Event| FrontendUI[Teal Light Web Interface]
+    SmartContract -->|On-Chain Event| FrontendUI[Solid Light Web App]
 ```
 
 ---
 
-## 🛠️ Smart Contract Specifications (`contracts/CrowdfundDAO.sol`)
+## 🛠️ Smart Contract Interface (`CrowdfundDAO.sol`)
 
-### Primary Functions:
-- `createCampaign(title, desc, category, img, goal, duration, milestoneTitles, milestoneAmounts)`: Deploys a new campaign with custom milestone allocation.
-- `contribute(campaignId)`: `payable` function to back a campaign and record contribution weight.
-- `proposeMilestonePayout(campaignId, milestoneIdx, duration)`: Allows creator to request the next milestone payout.
-- `voteOnMilestone(campaignId, milestoneIdx, support)`: Enables backers to vote APPROVE/REJECT on proposed milestones.
-- `executeMilestoneRelease(campaignId, milestoneIdx)`: Releases funds to creator wallet if proposal passed.
-- `claimRefund(campaignId)`: Returns 100% of backed ETH to contributor if campaign expired without meeting target goal.
+- `createCampaign(...)`: Initializes a new campaign with custom target funding goals and milestone allocations.
+- `contribute(uint256 campaignId)`: Payable function recording backer contribution weight and updating vault reserves.
+- `proposeMilestonePayout(uint256 campaignId, uint256 milestoneIdx)`: Allows creators to request milestone fund release upon completing deliverables.
+- `voteOnMilestone(uint256 campaignId, uint256 milestoneIdx, bool support)`: Enables backers to vote on proposed milestones proportional to their contribution amount.
+- `executeMilestoneRelease(uint256 campaignId, uint256 milestoneIdx)`: Disburses funds to the campaign creator upon passing milestone consensus.
+- `claimRefund(uint256 campaignId)`: Allows backers to reclaim 100% of contributed ETH if the campaign deadline passes under-funded.
 
 ---
 
-## 💻 Local Setup & Development
+## 🚀 Quick Start Guide
 
-### 1. Installation
+### Prerequisites
+- Node.js (v18.x or higher)
+- npm or yarn
+
+### 1. Clone & Install Dependencies
 ```bash
-git clone <repo-url>
+git clone https://github.com/kevhim/Crowdfunding-Platform-DAO-.git
 cd 01-crowdfunding-dao
 npm install
 ```
 
-### 2. Run Development Server
+### 2. Run Local Development Server
 ```bash
 npm run dev
 ```
 Open [http://localhost:5173](http://localhost:5173) in your browser.
 
-### 3. Execute Automated Unit Tests
+### 3. Run Automated Unit Test Suite
 ```bash
 npm test
 ```
-Runs comprehensive test suites covering campaign creation, contribution, voting, double-vote prevention, and refund claims.
 
-### 4. Build for Production
+### 4. Build Production Distribution
 ```bash
 npm run build
 ```
 
 ---
 
-## 📊 Evaluation & Verification Checklist
+## 🛡️ Security Audit Summary
 
-- [x] **Smart Contract Audit Passed**: ReentrancyGuard & Checks-Effects-Interactions verified.
-- [x] **Cybersecurity & Smart Contract Audit**: SWC matrix documented in `SECURITY.md` with 0 npm vulnerabilities.
-- [x] **Teal Light UI Refinement**: Vibrant Teal & Ocean Blue theme styling (zero purple/indigo).
-- [x] **Full Feature Functionality**: Campaign creation, funding, voting, payout release, refund claim, and audit receipt export.
-- [x] **Automated Tests**: 12/12 passed with 100% test success rate.
+AetherFund was audited against SWC (Smart Contract Weakness Classification) standards. Complete threat analysis matrix is available in [`SECURITY.md`](./SECURITY.md).
+
+- **SWC-107 (Reentrancy)**: Guarded via nonReentrant state modifiers.
+- **SWC-114 (Front-Running)**: Fixed deadlines and state snapshot locks.
+- **Dependencies**: 0 vulnerabilities found via `npm audit`.
+
+---
+
+## 📄 License
+Distributed under the **MIT License**. See `LICENSE` for details.
