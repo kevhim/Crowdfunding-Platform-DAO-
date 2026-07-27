@@ -1,6 +1,7 @@
 # 🎓 Project 1 Final Submission Package: AetherFund Crowdfunding dApp
 
 **Project Name**: AetherFund - Decentralized Crowdfunding & Milestone Governance  
+**Intern ID**: `CITS7292`  
 **Portfolio Slot**: Project 1 of 4 (Foundational Web3 & Smart Contracts)  
 **Author**: Yash Sharma  
 **Date**: July 27, 2026  

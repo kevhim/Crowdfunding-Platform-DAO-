@@ -1,5 +1,7 @@
 # 🚀 AetherFund: Decentralized Crowdfunding & Milestone Governance
 
+**Intern ID**: `CITS7292`
+
 AetherFund is a high-security, transparent crowdfunding platform built on the Ethereum Virtual Machine (EVM). It introduces **DAO Milestone Governance**, ensuring creators do not receive all raised funds in a single lump sum. Instead, funds are locked in the smart contract and released incrementally only when campaign backers approve milestone payout proposals through weighted voting proportional to their ETH contributions.
 
 ---
