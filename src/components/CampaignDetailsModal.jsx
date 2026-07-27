@@ -172,7 +172,7 @@ export function CampaignDetailsModal({
                   <div style={{ display: "flex", gap: "0.6rem" }}>
                     <input
                       type="number"
-                      step="0.05"
+                      step="any"
                       min="0.01"
                       value={fundAmount}
                       onChange={(e) => setFundAmount(e.target.value)}
