@@ -57,7 +57,7 @@ export function CreateCampaignModal({ onClose, onCreate }) {
       <div className="modal-content" onClick={e => e.stopPropagation()}>
         <div className="modal-header">
           <div style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
-            <Rocket color="#4f46e5" size={20} />
+            <Rocket color="#0d9488" size={20} />
             <h2 style={{ fontSize: "1.2rem", color: "var(--text-primary)" }}>Launch Crowdfunding Campaign</h2>
           </div>
           <button className="close-btn" onClick={onClose}>

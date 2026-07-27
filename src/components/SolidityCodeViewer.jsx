@@ -180,7 +180,7 @@ export function SolidityCodeViewer() {
       <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "1.25rem" }}>
         <div>
           <h2 style={{ fontSize: "1.2rem", display: "flex", alignItems: "center", gap: "0.4rem", color: "var(--text-primary)" }}>
-            <Code color="#4f46e5" size={20} />
+            <Code color="#0d9488" size={20} />
             Smart Contract Architecture (Solidity v0.8.20)
           </h2>
           <p style={{ fontSize: "0.825rem", color: "var(--text-secondary)", marginTop: "0.15rem" }}>
@@ -195,11 +195,11 @@ export function SolidityCodeViewer() {
       </div>
 
       <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: "0.85rem", marginBottom: "1.25rem" }}>
-        <div style={{ background: "#e0e7ff", padding: "0.85rem", borderRadius: "8px", border: "1px solid #c7d2fe" }}>
-          <div style={{ color: "#3730a3", fontWeight: "700", fontSize: "0.85rem", display: "flex", alignItems: "center", gap: "0.3rem", marginBottom: "0.2rem" }}>
+        <div style={{ background: "#ccfbf1", padding: "0.85rem", borderRadius: "8px", border: "1px solid #99f6e4" }}>
+          <div style={{ color: "#0f766e", fontWeight: "700", fontSize: "0.85rem", display: "flex", alignItems: "center", gap: "0.3rem", marginBottom: "0.2rem" }}>
             <Lock size={15} /> Reentrancy Protection
           </div>
-          <div style={{ fontSize: "0.775rem", color: "#4338ca" }}>
+          <div style={{ fontSize: "0.775rem", color: "#0d9488" }}>
             Custom `nonReentrant` modifier guards against malicious contract call recursions.
           </div>
         </div>

@@ -96,7 +96,7 @@ const INITIAL_CAMPAIGN_DATA = [
     title: "OpenRender: Decentralized GPU Rendering Network",
     description: "Connecting indie 3D artists with idle GPU compute capacity worldwide using automated micro-payment smart contracts on Layer-2.",
     category: "DeAI & Infrastructure",
-    imageUrl: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80",
+    imageUrl: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&q=80",
     targetGoalEth: 8.0,
     totalRaisedEth: 3.2,
     deadlineTimestamp: Date.now() + 20 * 86400 * 1000,

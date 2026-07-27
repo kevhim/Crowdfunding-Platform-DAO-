@@ -1,6 +1,6 @@
-# 🚀 PulseDAO: Decentralized Crowdfunding & Milestone Governance
+# 🚀 AetherFund: Decentralized Crowdfunding & Milestone Governance
 
-PulseDAO is a high-security, transparent crowdfunding platform built on the Ethereum Virtual Machine (EVM). It introduces **DAO Milestone Governance**, ensuring creators do not receive all raised funds in a single lump sum. Instead, funds are locked in the smart contract and released incrementally only when campaign backers approve milestone payout proposals through weighted voting proportional to their ETH contributions.
+AetherFund is a high-security, transparent crowdfunding platform built on the Ethereum Virtual Machine (EVM). It introduces **DAO Milestone Governance**, ensuring creators do not receive all raised funds in a single lump sum. Instead, funds are locked in the smart contract and released incrementally only when campaign backers approve milestone payout proposals through weighted voting proportional to their ETH contributions.
 
 ---
 
@@ -12,7 +12,7 @@ PulseDAO is a high-security, transparent crowdfunding platform built on the Ethe
 4. **Dual-Mode Web3 Architecture**:
    - **Virtual Testnet Sandbox**: Zero-dependency local environment with pre-funded test accounts, simulated block mining, and real-time state persistence.
    - **MetaMask EVM Bridge**: Seamless 1-click fallback to browser wallet providers (`ethers.js` v6).
-5. **Minimalist Light Design System**: Clean off-white palette (`#F8FAFC`), crisp Slate typography, flat card containers with subtle borders (`#E2E8F0`), and generous breathing room.
+5. **Teal & Ocean Blue Light Design System**: Vibrant Teal (`#0D9488`) and Ocean Cyan (`#0284C7`) accents, crisp Slate typography, flat card containers with subtle borders (`#E2E8F0`), and generous breathing room.
 
 ---
 
@@ -30,7 +30,7 @@ graph TD
         RefundEngine[Checks-Effects-Interactions Refund]
     end
     
-    SmartContract -->|On-Chain Event| FrontendUI[Minimalist Light Web Interface]
+    SmartContract -->|On-Chain Event| FrontendUI[Teal Light Web Interface]
 ```
 
 ---
@@ -66,7 +66,7 @@ Open [http://localhost:5173](http://localhost:5173) in your browser.
 ```bash
 npm test
 ```
-Runs 7 comprehensive test suites covering campaign creation, contribution, voting, double-vote prevention, and refund claims.
+Runs comprehensive test suites covering campaign creation, contribution, voting, double-vote prevention, and refund claims.
 
 ### 4. Build for Production
 ```bash
@@ -78,6 +78,6 @@ npm run build
 ## 📊 Evaluation & Verification Checklist
 
 - [x] **Smart Contract Audit Passed**: ReentrancyGuard & Checks-Effects-Interactions verified.
-- [x] **Light UI Refinement**: 100% minimalist light theme styling without dark mode remnants.
+- [x] **Teal Light UI Refinement**: Vibrant Teal & Ocean Blue theme styling (zero purple/indigo).
 - [x] **Full Feature Functionality**: Campaign creation, funding, voting, payout release, refund claim, and audit receipt export.
-- [x] **Automated Tests**: Passed with 100% test success rate.
+- [x] **Automated Tests**: 12/12 passed with 100% test success rate.

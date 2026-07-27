@@ -9,7 +9,7 @@ export function Header({ walletState, onConnectMetaMask, onSwitchSandbox, onOpen
           <ShieldCheck size={22} color="#ffffff" />
         </div>
         <div style={{ display: "flex", flexDirection: "column" }}>
-          <span className="gradient-text" style={{ fontSize: "1.35rem", lineHeight: "1.1" }}>PulseDAO</span>
+          <span className="gradient-text" style={{ fontSize: "1.35rem", lineHeight: "1.1" }}>AetherFund</span>
           <span style={{ fontSize: "0.75rem", color: "var(--text-secondary)", fontWeight: "500", marginTop: "0.1rem" }}>
             Decentralized Crowdfunding & Governance
           </span>
@@ -38,7 +38,7 @@ export function Header({ walletState, onConnectMetaMask, onSwitchSandbox, onOpen
           <span className={`wallet-mode-indicator ${walletState.mode === 'metamask' ? 'wallet-mode-metamask' : 'wallet-mode-sandbox'}`}>
             {walletState.mode === 'metamask' ? 'MetaMask EVM' : 'Sandbox'}
           </span>
-          <Wallet size={15} color="#4f46e5" />
+          <Wallet size={15} color="#0d9488" />
           <span className="address-tag">
             {walletState.address.slice(0, 6)}...{walletState.address.slice(-4)}
           </span>

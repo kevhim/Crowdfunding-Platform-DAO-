@@ -3,7 +3,7 @@ import fs from "fs";
 
 async function main() {
   console.log("====================================================");
-  console.log("  PulseDAO - Smart Contract Deployment Script       ");
+  console.log("  AetherFund - Smart Contract Deployment Script     ");
   console.log("====================================================");
 
   const rpcUrl = process.env.RPC_URL || "http://127.0.0.1:8545";

@@ -55,7 +55,7 @@ export function CampaignDetailsModal({
     const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(campaign, null, 2));
     const downloadAnchor = document.createElement('a');
     downloadAnchor.setAttribute("href", dataStr);
-    downloadAnchor.setAttribute("download", `pulsedao_campaign_${campaign.id}_audit.json`);
+    downloadAnchor.setAttribute("download", `aetherfund_campaign_${campaign.id}_audit.json`);
     document.body.appendChild(downloadAnchor);
     downloadAnchor.click();
     downloadAnchor.remove();
@@ -118,7 +118,7 @@ export function CampaignDetailsModal({
                 <div>
                   <div className="progress-container" style={{ marginBottom: "1rem" }}>
                     <div className="progress-header">
-                      <span style={{ fontWeight: "700", fontSize: "1.1rem", color: "var(--primary-indigo)" }}>
+                      <span style={{ fontWeight: "700", fontSize: "1.1rem", color: "var(--primary-brand)" }}>
                         {campaign.totalRaisedEth.toFixed(2)} ETH
                       </span>
                       <span style={{ color: "var(--text-muted)", fontSize: "0.85rem" }}>Goal: {campaign.targetGoalEth} ETH</span>
@@ -131,7 +131,7 @@ export function CampaignDetailsModal({
                   <div style={{ background: "var(--bg-subtle)", padding: "0.85rem", borderRadius: "8px", border: "1px solid var(--border-color)", fontSize: "0.825rem", marginBottom: "1rem" }}>
                     <div style={{ display: "flex", justifyContent: "space-between", marginBottom: "0.35rem" }}>
                       <span style={{ color: "var(--text-secondary)" }}>Creator Address:</span>
-                      <span style={{ fontFamily: "var(--font-mono)", color: "var(--primary-indigo)" }}>
+                      <span style={{ fontFamily: "var(--font-mono)", color: "var(--primary-brand)" }}>
                         {campaign.creator.slice(0, 6)}...{campaign.creator.slice(-4)}
                       </span>
                     </div>
@@ -209,7 +209,7 @@ export function CampaignDetailsModal({
                     <div key={idx} style={{ background: "#ffffff", padding: "1rem", borderRadius: "10px", border: "1px solid var(--border-color)" }}>
                       <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: "0.4rem" }}>
                         <div>
-                          <span style={{ fontSize: "0.725rem", color: "var(--primary-indigo)", fontWeight: "700" }}>
+                          <span style={{ fontSize: "0.725rem", color: "var(--primary-brand)", fontWeight: "700" }}>
                             MILESTONE #{idx + 1}
                           </span>
                           <h4 style={{ fontSize: "0.95rem", color: "var(--text-primary)" }}>{m.title}</h4>
@@ -300,7 +300,7 @@ export function CampaignDetailsModal({
                 ) : (
                   campaign.backers.map((b, idx) => (
                     <div key={idx} style={{ display: "flex", justifyContent: "space-between", alignItems: "center", padding: "0.65rem 0.85rem", background: "var(--bg-subtle)", border: "1px solid var(--border-color)", borderRadius: "8px", fontSize: "0.825rem" }}>
-                      <div style={{ fontFamily: "var(--font-mono)", color: "var(--primary-indigo)" }}>
+                      <div style={{ fontFamily: "var(--font-mono)", color: "var(--primary-brand)" }}>
                         {b.address.slice(0, 8)}...{b.address.slice(-6)}
                       </div>
                       <div style={{ display: "flex", gap: "0.85rem", alignItems: "center" }}>

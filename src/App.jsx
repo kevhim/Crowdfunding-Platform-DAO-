@@ -11,7 +11,7 @@ import { Search, CheckCircle2 } from "lucide-react";
 
 /**
  * @file App.jsx
- * @description Main application container for PulseDAO Decentralized Crowdfunding Platform.
+ * @description Main application container for AetherFund Decentralized Crowdfunding Platform.
  * Implements React performance best practices (useCallback, useMemo) and web3 state management.
  */
 export function App() {

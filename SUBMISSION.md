@@ -1,6 +1,6 @@
-# 🎓 Project 1 Final Submission Package: PulseDAO Crowdfunding dApp
+# 🎓 Project 1 Final Submission Package: AetherFund Crowdfunding dApp
 
-**Project Name**: PulseDAO - Decentralized Crowdfunding & Milestone Governance  
+**Project Name**: AetherFund - Decentralized Crowdfunding & Milestone Governance  
 **Portfolio Slot**: Project 1 of 4 (Foundational Web3 & Smart Contracts)  
 **Author**: Yash Sharma  
 **Date**: July 27, 2026  
@@ -9,7 +9,7 @@
 ---
 
 ## 📌 Executive Summary
-PulseDAO is an end-to-end Web3 decentralized application built to solve the trust problem in online crowdfunding. By combining **Solidity smart contracts**, **reentrancy security guards**, **DAO milestone-based fund releases**, and a **minimalist light user interface**, PulseDAO provides a production-grade Web3 platform for creators and backers.
+AetherFund is an end-to-end Web3 decentralized application built to solve the trust problem in online crowdfunding. By combining **Solidity smart contracts**, **reentrancy security guards**, **DAO milestone-based fund releases**, and a **vibrant Teal & Ocean Blue light user interface**, AetherFund provides a production-grade Web3 platform for creators and backers.
 
 ---
 
@@ -19,7 +19,7 @@ PulseDAO is an end-to-end Web3 decentralized application built to solve the trus
 | :--- | :--- |
 | **`contracts/CrowdfundDAO.sol`** | Production Solidity v0.8.20 contract with `ReentrancyGuard`, custom gas errors, and milestone governance. |
 | **`src/services/web3Service.js`** | Virtual Ethereum Testnet engine & Ethers.js provider integration. |
-| **`src/index.css` & `src/App.jsx`** | 100% Minimalist light design system (#F8FAFC slate background, crisp light white cards, indigo accents). |
+| **`src/index.css` & `src/App.jsx`** | 100% Light design system (#F8FAFC slate background, crisp white cards, vibrant Teal & Ocean Blue accents). |
 | **`DESIGN.md`** | Complete Design Guidelines, color tokens, typography system, and design prompts. |
 | **`README.md`** | Setup instructions, architecture diagram (Mermaid), smart contract API, and testing guide. |
 | **`test/CrowdfundDAO.test.js`** | Automated unit tests (Vitest) verifying smart contract logic and refund guarantees. |
@@ -32,7 +32,7 @@ PulseDAO is an end-to-end Web3 decentralized application built to solve the trus
 ```
  RUN  v4.1.10 C:/Users/Yash Sharma/Desktop/intern_projects/01-crowdfunding-dao
 
- ✓ test/CrowdfundDAO.test.js (12 tests) 22ms
+ ✓ test/CrowdfundDAO.test.js (12 tests) 18ms
 
  Test Files  1 passed (1)
       Tests  12 passed (12)

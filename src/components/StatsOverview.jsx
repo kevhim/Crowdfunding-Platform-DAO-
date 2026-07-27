@@ -10,7 +10,7 @@ export function StatsOverview({ campaigns }) {
   return (
     <div className="stats-grid">
       <div className="stat-card">
-        <div className="stat-icon-box" style={{ color: "#4f46e5", background: "#e0e7ff" }}>
+        <div className="stat-icon-box" style={{ color: "#0d9488", background: "#ccfbf1" }}>
           <Coins size={22} />
         </div>
         <div>

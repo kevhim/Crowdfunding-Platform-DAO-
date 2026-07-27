@@ -26,7 +26,7 @@ export function DAOGovernancePanel({ campaigns, userAddress, userContributions, 
       <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "1.25rem" }}>
         <div>
           <h2 style={{ fontSize: "1.2rem", display: "flex", alignItems: "center", gap: "0.4rem", color: "var(--text-primary)" }}>
-            <Shield color="#4f46e5" size={20} />
+            <Shield color="#0d9488" size={20} />
             DAO Milestone Governance Dashboard
           </h2>
           <p style={{ fontSize: "0.825rem", color: "var(--text-secondary)", marginTop: "0.15rem" }}>
@@ -56,7 +56,7 @@ export function DAOGovernancePanel({ campaigns, userAddress, userContributions, 
               <div key={idx} style={{ background: "#ffffff", padding: "1.25rem", borderRadius: "10px", border: "1px solid var(--border-color)" }}>
                 <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: "0.6rem" }}>
                   <div>
-                    <span style={{ fontSize: "0.725rem", color: "var(--primary-indigo)", fontWeight: "700" }}>
+                    <span style={{ fontSize: "0.725rem", color: "var(--primary-brand)", fontWeight: "700" }}>
                       CAMPAIGN: {p.campaignTitle}
                     </span>
                     <h3 style={{ fontSize: "1rem", color: "var(--text-primary)", marginTop: "0.1rem" }}>

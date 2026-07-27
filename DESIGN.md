@@ -1,12 +1,12 @@
 # 🎨 Minimalist Light UI Design System & Specification
 
 ## 1. Design Vision & Philosophy
-The **PulseDAO** interface is built on modern minimalist light design principles (inspired by Stripe, Linear, and Vercel Light UI). 
-Web3 application interfaces are inherently complex with technical details (gas fees, transaction hashes, public keys, cryptographic states). To maximize usability and user trust, the UI eliminates dark modes, heavy textures, and noisy neon glow, replacing them with:
+The **AetherFund** interface is built on modern minimalist light design principles (inspired by Stripe, Linear, and Vercel Light UI). 
+Web3 application interfaces are inherently complex with technical details (gas fees, transaction hashes, public keys, cryptographic states). To maximize usability and user trust, the UI eliminates dark modes, heavy textures, and purple tones, replacing them with:
 - **Pure Whitespace & Breathing Room**: Generous margins and double padding for visual clarity.
 - **High-Contrast Typography**: Slate black and crisp gray hierarchy on an ultra-clean off-white background.
 - **Subtle Elevation & Borders**: Thin 1px subtle borders (`#E2E8F0`) with micro-shadows instead of heavy drop shadows.
-- **Purposeful Color Tokens**: Clean slate base with indigo primary actions, emerald success badges, amber voting alerts, and subtle status tags.
+- **Purposeful Color Tokens**: Clean slate base with vibrant Teal & Ocean Blue primary actions, emerald success badges, amber voting alerts, and subtle status tags.
 
 ---
 
@@ -22,8 +22,9 @@ Web3 application interfaces are inherently complex with technical details (gas f
 | `--text-primary` | `#0F172A` | Primary headings, titles, and active text (Slate 900) |
 | `--text-secondary` | `#475569` | Body paragraphs, key labels (Slate 600) |
 | `--text-muted` | `#94A3B8` | Subtitles, block numbers, timestamps (Slate 400) |
-| `--primary-indigo` | `#4F46E5` | Primary CTA buttons, active state indicators |
-| `--primary-indigo-hover` | `#4338CA` | Hover state for primary buttons |
+| `--primary-brand` | `#0D9488` | Primary Teal CTA buttons, active state indicators |
+| `--primary-brand-hover` | `#0F766E` | Hover state for primary buttons |
+| `--accent-cyan` | `#0284C7` | Ocean Cyan accent, gradient pairing, category tags |
 | `--accent-emerald` | `#10B981` | Successful funding, approved milestone payout, balance |
 | `--accent-amber` | `#D97706` | Voting active alert, proposal pending state |
 | `--accent-red` | `#EF4444` | Refund claim, campaign failed, vote reject |
@@ -50,8 +51,8 @@ Web3 application interfaces are inherently complex with technical details (gas f
 
 When generating or scaling components for this application, use the following standardized prompt template:
 
-> **Minimalist Light Web3 UI Prompt**:
-> *"Design a ultra-clean, minimalist light-themed Web3 dApp interface. Use an off-white background (#F8FAFC), pure white card surfaces (#FFFFFF) with 1px subtle borders (#E2E8F0), and crisp Slate typography (#0F172A). Primary actions should use a solid indigo CTA (#4F46E5). Incorporate generous whitespace, subtle 1px border elevation, pill-shaped network badges, crisp monospace font for wallet addresses, and clear progress bars with clean percentage labels. Avoid dark backgrounds, heavy gradients, or glowing neon effects."*
+> **Minimalist Teal Light Web3 UI Prompt**:
+> *"Design an ultra-clean, minimalist light-themed Web3 dApp interface. Use an off-white background (#F8FAFC), pure white card surfaces (#FFFFFF) with 1px subtle borders (#E2E8F0), and crisp Slate typography (#0F172A). Primary actions should use a solid Teal CTA (#0D9488) paired with Ocean Cyan (#0284C7). Incorporate generous whitespace, subtle 1px border elevation, pill-shaped network badges, crisp monospace font for wallet addresses, and clear progress bars with clean percentage labels. Avoid purple tones, dark backgrounds, heavy textures, or glowing neon effects."*
 
 ---
 
